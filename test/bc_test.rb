@@ -30,6 +30,7 @@ class TestBaseCustom < Test::Unit::TestCase
     assert_raise RuntimeError, LoadError do base2.base(:nonexistant); end
     assert_raise RuntimeError, LoadError do base2.base('abc'); end
     assert_raise RuntimeError, LoadError do base2.base(4.5); end
+    assert_raise RuntimeError, LoadError do base2.base(-3); end
     assert_raise RuntimeError, LoadError do BaseCustom.new(%w[:a :b :c]); end
     assert_raise RuntimeError, LoadError do BaseCustom.new(0..9); end
     assert_raise RuntimeError, LoadError do BaseCustom.new(['0','1',2]); end
