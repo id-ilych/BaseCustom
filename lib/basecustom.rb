@@ -45,6 +45,7 @@ class BaseCustom
       i_out
     # end input_val.is_a?(String)
     elsif input_val.is_a?(Integer)
+       raise "Negative integers are not supported!" if input_val < 0
        return @BASE_PRIMITIVES_HASH.first[0] if input_val == 0
        number = input_val
        result = ""
